@@ -1,0 +1,41 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: build active file",
+			"command": "gcc",
+			"args": [
+				"${file}",
+				"-o"
+				"${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"detail": "compiler: gcc"
+		},
+		{
+			"type": "cppbuild",
+			"label": "C/C++: build active file",
+			"command": "g++",
+			"args": [
+				"${file}",
+				"-o"
+				"${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$msCompile"
+			],
+			"group": "build",
+			"detail": "compiler: g++"
+		}
+	]
+}
