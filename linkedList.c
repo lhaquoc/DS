@@ -41,14 +41,15 @@ void insertAfter(struct Node* prev_node, int new_data) {
     }
 
     struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
+    new_node->data = new_data;
     new_node->next = prev_node->next;
-    prev_node->next = prev_node;
+    prev_node->next = new_node;
 }
 
 void append(struct Node** head_ref, int new_data) {
     struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
     struct Node *last = *head_ref;
-    
+
     new_node->data = new_data;
     new_node->next = NULL;
     if(*head_ref == NULL) {
@@ -62,6 +63,10 @@ void append(struct Node** head_ref, int new_data) {
     
     last->next = new_node;
     return;
+}
+
+void deleteNode(struct Node **head_ref, int key) {
+    
 }
 
 int main() {
@@ -91,6 +96,9 @@ int main() {
     printList(head);
     printf("\n");
     append(&head, 99);
+    printList(head);
+    printf("\n");
+    insertAfter(head->next, 345);
     printList(head);
 
     return 0;
