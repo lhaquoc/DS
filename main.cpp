@@ -39,11 +39,16 @@ void RemoveElement(int a[], int &n, int pos) {
 }
 
 int main() {
-    int a[] = {1,2,3,4,5};
+    /* int a[] = {1,2,3,4,5};
     int n = 5;
     AddElement(a, n, 3, -1);
     for (int i = 0; i < n; i++) {
         cout << a[i] << " ";
+    } */
+
+    int nums[5] = {1};
+    for(int i = 0; i < 5; i++) {
+        printf("%d ", nums[i]);
     }
     return 0;
 }
